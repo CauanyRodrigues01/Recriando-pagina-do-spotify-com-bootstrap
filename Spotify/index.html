@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/compiler/bootstrap.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <link href="public/css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="shortcut icon"
+      href="public/img/spotify.ico"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="containerIndex" class="container-fluid">
+      <div class="row">
+        <!--
+         A tag nav é uma seção do html que vai agrupar o menu esquerdo da página
+        -->
+        <nav id="menu" class="col-md-2">
+          <i class="fas fa-ellipsis-h"></i>
+          <!--
+           O Bootstrap possui algumas classes próprias para o menu de navegação.
+           A tag ul que agrupa todos os ítens vai possuir a classe `nav` e `flex-column` que vai deixar os links os itens empilhados
+           Todos seus itens vai possuir a classe `nav-item`
+         -->
+          <ul id="menuPrincipal" class="nav flex-column">
+            <li class="nav-item">
+              <img src="public/img/icons/home.svg" alt="Início" class="icon" />
+              Início
+            </li>
+            <li class="nav-item">
+              <i class="fas fa-search"></i>
+              Navegar
+            </li>
+            <li class="nav-item">
+              <img src="public/img/icons/sinal.svg" alt="Rádio" class="icon" />
+              Rádio
+            </li>
+          </ul>
+
+          <ul id="menuBiblioteca" class="nav flex-column">
+            SUA BIBLIOTECA
+            <li class="nav-item">Feito para você</li>
+            <li class="nav-item">Tocadas recentemente</li>
+            <li class="nav-item">Músicas Curtidas</li>
+            <li class="nav-item">Álbuns</li>
+            <li class="nav-item">Artistas</li>
+            <li class="nav-item">Podcasts</li>
+          </ul>
+
+          <ul id="menuPlaylists" class="nav flex-column">
+            PLAYLISTS
+            <li class="nav-item">Infantil</li>
+            <li class="nav-item">Toy Story Playlist</li>
+            <li class="nav-item">Louvores internacionais</li>
+          </ul>
+
+          <div id="novaPlaylist" class="row">
+            <i class="fas fa-plus"></i>
+            <p>Nova Playlist</p>
+          </div>
+        </nav>
+
+        <!--
+         A tag main é uma seção do html que vai agrupar o espaço principal da página, ou seja,o centro.
+        -->
+        <main id="main" class="col-md-8">
+          <section id="header" class="d-flex">
+            <div id="opcoesInicio">
+              <i class="fas fa-chevron-left"></i>
+              <i class="fas fa-chevron-right"></i>
+              <input
+                type="text"
+                id="buscar"
+                name="buscar"
+                value="&#x1F50E; Buscar"
+              />
+            </div>
+            <div id="usuario" class="d-flex">
+              <i class="fas fa-user-circle"></i>
+              <p>Usuário</p>
+              <i class="fas fa-angle-down"></i>
+            </div>
+          </section>
+
+          <section id="opcoesFiltro">
+            <h1>Artistas</h1>
+            <hr />
+            <div id="filtrar" class="d-flex">
+              <i class="fas fa-search"></i>
+              <p>Filtrar</p>
+            </div>
+            <div id="classificar" class="d-flex">
+              <h5>Classificado por</h5>
+              <select>
+                <option>Nome</option>
+                <option>Ano</option>
+                <option>Gênero</option>
+              </select>
+            </div>
+            <hr />
+          </section>
+
+          <section id="artistas" class="row">
+            <div class="artista col">
+              <img src="./public/img/bonjovi.jpg" class="rounded-circle" />
+              <h6>Bon Jovi</h6>
+            </div>
+
+            <div class="artista col">
+              <img src="./public/img/jeremy.jpg" class="rounded-circle" />
+              <h6>Jeramy Camp</h6>
+            </div>
+
+            <div class="artista col">
+              <img
+                src="./public/img/kutless.jpg"
+                width="150"
+                height="150"
+                class="rounded-circle"
+              />
+              <h6>Kutless</h6>
+            </div>
+
+            <div class="artista col">
+              <img src="./public/img/linkin.jpg" class="rounded-circle" />
+              <h6>Linkin Park</h6>
+            </div>
+
+            <div class="artista col-md-3">
+              <img src="./public/img/thebeatles.jpg" class="rounded-circle" />
+              <h6>The Beatles</h6>
+            </div>
+          </section>
+        </main>
+
+        <!--
+         A tag aside é uma seçãodo html que vai agrupar o espaço da direita
+        -->
+        <aside id="navegarPorAmigos" class="col-md-2 d-flex">
+          <div id="containerAmigos">
+            <h5>Veja o que seus amigos estão tocando</h5>
+            <button
+              id="botaoEncontrar"
+              type="button"
+              class="btn btn-outline-secondary"
+            >
+              ENCONTRAR AMIGOS
+            </button>
+          </div>
+        </aside>
+
+        <!--
+         A tag footer é a seção do html que vai agrupar o rodapé da página, ou seja, o controle musical
+        -->
+        <footer id="controleMusical" class="container-fluid">
+          <div id="containerMusical" class="row justify-content-end">
+            <div id="musica" class="col-md-8 d-flex">
+              <div id="controle">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-angle-double-left"></i>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-angle-double-right"></i>
+                <i class="fas fa-redo"></i>
+              </div>
+              <div id="barra">
+                <!--barra de tempo da musica-->
+              </div>
+            </div>
+            <div id="outrosControles" class="col-md-2 d-flex">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-desktop"></i>
+              <i class="fas fa-bullhorn"></i>
+              <div id="barraMenor">
+                <!--barra de volume da musica-->
+              </div>
+              <img
+                src="./public/img/icons/expandir.svg"
+                alt="Expandir"
+                class="icon"
+              />
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/popper.js/dist/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>

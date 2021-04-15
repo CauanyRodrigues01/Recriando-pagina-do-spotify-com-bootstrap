@@ -1,0 +1,225 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  color: #b3b3b3;
+}
+
+h1,
+h5 {
+  color: #fff;
+}
+
+hr {
+  background: #b3b3b3;
+}
+
+.icon {
+  width: 20px;
+}
+
+i {
+  margin: 1vh;
+}
+
+/* css da nav */
+
+#menu {
+  background: #121212;
+  height: 92vh;
+  padding-top: 1vh;
+  overflow-y: auto;
+}
+
+#menu ul {
+  margin: 1rem 0.5rem 0rem 0.5rem;
+}
+
+#menuPrincipal li {
+  margin: 0.4rem 0rem;
+}
+
+#menuBiblioteca li {
+  margin: 0.2rem 0rem;
+}
+
+#menuPlaylists li {
+  margin: 0.2rem 0rem;
+}
+
+#novaPlaylist {
+  align-items: baseline;
+  border-top: 1px solid #b3b3b3;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+/* fim da nav */
+
+/* css do main */
+#main {
+  background: linear-gradient(180deg, #585858 0%, #282828 38.36%, #0e0e0e 100%);
+  height: 92vh; /*preecher toda a tela*/
+  padding: 20px 24px 24px 24px;
+  overflow-y: auto;
+}
+
+#header {
+  justify-content: space-between; /* jogar os elementos para os lados */
+  margin-top: 1vh;
+}
+
+#buscar {
+  border-radius: 50px;
+  color: black;
+  border: none;
+  padding: 0.2vh 0.4vw;
+}
+
+#usuario {
+  padding: 0.3vh 0.5vw;
+}
+
+#opcoesFiltro {
+  margin-top: 10vh;
+}
+
+#filtrar {
+  align-items: baseline; /* elementos alinhados pela linha de base*/
+}
+
+#classificar {
+  margin-top: 4vh;
+}
+
+#classificar h5 {
+  padding-right: 2vh;
+}
+
+#classificar select {
+  width: 15vw;
+  background-color: #4c4847;
+  color: white;
+  border: none;
+}
+
+.artista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.artista img {
+  width: 150px;
+  height: 150px;
+}
+
+.artista h6 {
+  color: rgb(255, 249, 249);
+}
+
+/*fim do main*/
+
+/*css da barra direita*/
+
+#navegarPorAmigos {
+  background-color: #121212;
+  min-height: 92vh;
+}
+
+#botaoEncontrar {
+  border: 1px solid #b3b3b3;
+  color: white;
+  border-radius: 30px;
+  margin-top: 8vh;
+}
+
+#navegarPorAmigos {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#botaoEncontrar {
+  border-radius: 50px;
+  width: 14vw;
+  font-size: 1.1vw;
+}
+
+/*fim da barra direita*/
+
+/*css do controle musical*/
+
+#controleMusical {
+  background-color: #282828;
+  height: 8vh;
+  bottom: 0;
+  position: fixed;
+}
+
+#musica {
+  align-items: center;
+  flex-direction: column;
+}
+
+#controle {
+  margin: 0.2rem;
+}
+
+#barra {
+  border-radius: 50px;
+  background-color: #b3b3b3;
+  width: clamp(10rem, 40vw, 40rem);
+  height: 4px;
+  margin: none;
+}
+
+#outrosControles {
+  align-items: center;
+}
+
+#outrosControles i,
+img {
+  margin: 0.2rem 0.5rem;
+}
+
+#barraMenor {
+  background-color: #b3b3b3;
+  border-radius: 50px;
+  display: inline-block;
+  height: 4px;
+  width: 5vw;
+}
+
+@media (max-width: 767px) {
+  #outrosControles {
+    display: none;
+  }
+  #botaoEncontrar {
+    width: auto;
+    font-size: 14px;
+  }
+}
+/*fim do controle musical*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131212; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
